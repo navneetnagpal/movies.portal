@@ -1,0 +1,24 @@
+<html ng-app="movies.app">
+<head>
+	<meta charset="UTF-8">
+	<title>Disney: Movies Homepage</title>
+		<link rel="stylesheet" type="text/css" href="build/css/main.css">  
+	<script src="lib/jquery.js"></script>
+	<script src="lib/bootstrap.js"></script>
+	<script src="lib/underscore.js"></script>
+	<script src="lib/angular.js"></script>
+	<script src="app/app.js"></script>
+	<script src="app/components/movies-list/movies.service.js"></script>
+	<script src="app/components/movies-list/movies.ctrl.js"></script>
+	<script src="app/components/movies-list/main.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>Movies</h1>
+		<div class="movies-page" ng-controller="moviesCtrl">
+			<movies-list></movies-list>
+		</div>
+		
+	</div>
+</body>
+</html>

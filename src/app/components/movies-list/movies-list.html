@@ -1,0 +1,50 @@
+<div class="movies-list">
+	<div class="search-box col-xs-12">
+		Search:<input type="text" class="search-box">
+	</div>
+	<div class="col-xs-12">
+		<div class="pagination">
+			<span class="pull-left">
+				{{currentPage}} of {{totalPages}}
+			</div>
+			<span class="pull-right">
+				Sort by: <select class="sort-by" ng-change="changeSortBy()" ng-model="sortBy">
+					<option value="date">Date</option>
+					<option value="title">Name</option>
+				</select>
+			</div>
+		</div>
+		<div class="movies-list">
+				<div ng-repeat="item in list" class="row movies-list__item">
+					<div class="col-xs-2">
+						<img ng-src="{{item.image}}" alt="" class="movies-list__cover">
+					</div>
+					<div class="col-xs-10 ">
+						<div>
+							<h2>{{item.title}}</h2>
+						</div>
+						<div class="row clearfix">
+							<div class="col-xs-6">
+								<button class="btn btn-sm btn-primary" ng-click="toggleWatch()" ng-show="!item.inwatch"  >Add to watchlist</button>
+								<button class="btn btn-sm btn-primary" ng-click="toggleWatch()" ng-show="item.inwatch"  >Remove from watchlist</button>
+							</div>
+							<div class="col-xs-6">
+								<div class="movies-list__data"><strong>Release Date</strong>: {{ item.date | date : 'MMM dd, yyyy' : timezone}}</div>
+<div class="movies-list__data">
+	<strong>Run time</strong>: {{item.run_time}}
+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			 
+		</div>
+
+		<div class="pagination">
+			
+			<button class="btn btn-md btn-primary" ng-disabled="!hasPrev()" ng-click="prev()">Prev</button>
+
+			<button class="btn btn-md btn-primary" ng-disabled="!hasNext()" ng-click="next()">Next</button>
+		</div>
+	</div>
+</div>

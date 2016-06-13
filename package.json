@@ -1,0 +1,67 @@
+{
+  "name": "movies.portal",
+  "version": "1.0.0",
+  "description": "A portal to manage movies listing",
+  "main": "gulpfile.config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navneetnagpal/movies.portal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/navneetnagpal/movies.portal/issues"
+  },
+  "homepage": "https://github.com/navneetnagpal/movies.portal#readme",
+  "browserify": {
+    "transform": [
+      "browserify-ng-html2js"
+    ]
+  },
+  "browser": {
+    "APP": "./src/app/app.js"
+  },
+  "browserify-shim": {},
+  "dependencies": {
+    "angular": "^1.5.0",
+    "bootstrap": "^3.3.6",
+    "bootstrap-sass": "^3.3.6",
+    "hbs": "^4.0.0",
+    "jquery": "^2.2.0",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "app-root-path": "^1.0.0",
+    "autoprefixer": "^6.3.3",
+    "browser-sync": "~2.9.12",
+    "browserify": "~9.0.8",
+    "browserify-ng-html2js": "^1.2.0",
+    "del": "^2.2.0",
+    "eslint": "^1.10.3",
+    "eslint-plugin-backbone": "^1.2.0",
+    "gulp": "^3.8.11",
+    "gulp-browserify": "^0.5.1",
+    "gulp-debug": "^2.0.1",
+    "gulp-eslint": "^2.0.0",
+    "gulp-hub": "^0.7.1",
+    "gulp-inject": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
+    "karma": "^0.13.22",
+    "merge-stream": "^1.0.0",
+    "mkdirp": "^0.5.1",
+    "superstatic": "^4.0.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "vinyl-transform": "^1.0.0",
+    "watchify": "^3.7.0"
+  }
+}
