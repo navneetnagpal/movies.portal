@@ -18,7 +18,6 @@ appModule.controller('moviesCtrl',['$scope','moviesService',function($scope,movi
 		 
 		$scope.reset();
 		$scope.refresh();
-		$scope.$digest();
 	};
 
 	$scope.changeSortBy = function(){
