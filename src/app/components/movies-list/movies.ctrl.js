@@ -7,11 +7,10 @@ appModule.controller('moviesCtrl',['$scope','moviesService',function($scope,movi
 		$scope.sortBy="date";
 	};
 
-	$scope.onSearch = function(val){
-		if (val){
-			$scope.allList = _.filter($scope.allList,function(item){
-				console.log(item.title);
-				return item.title.toLowerCase().indexOf(val.toLowerCase())>-1
+	$scope.onSearch = function(){
+		if ($scope.keyword.trim()){
+			$scope.allList = _.filter(moviesService.getAll().items.slice(),function(item){				 
+				return item.title.toLowerCase().indexOf($scope.keyword.trim().toLowerCase())>-1
 			});
 		} else {
 			$scope.allList =moviesService.getAll().items.slice();
